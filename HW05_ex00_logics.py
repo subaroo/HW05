@@ -3,16 +3,26 @@
 ##############################################################################
 
 def even_odd():
-    """ Print even or odd:
-        Takes one integer from user
-            accepts only non-word numerals
-            must validate
-        Determines if even or odd
-        Prints determination
-        returns None
     """
-    pass
-
+    Takes one integer from user
+    Determines if even or odd
+    Prints determination
+    returns None
+    """
+    While True:
+        user_integer = raw_input("Please give me an integer: \n")
+        try:
+            user_number = int(user_integer)
+        except: 
+            print("Try again by giving me a number.")
+            return even_odd()       
+        else:
+            if user_number % 2 == 0:
+                print("even")
+            else:
+                print("odd")
+            return
+    
 
 def ten_by_ten():
     """ Prints integers 1 through 100 sequentially in a ten by ten grid."""
@@ -33,7 +43,7 @@ def main():
     Prints the following function:
         - find_average()
     """
-    pass
+    even_odd()
 
 if __name__ == '__main__':
     main()
